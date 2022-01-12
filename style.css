@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+    max-width: 980px;
+    
+}
+.second {
+    /* padding: 7px 0px 7px 0px; */
+    background-color: #599BD5;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.home{
+    color: #fff;
+}
+
+.input {
+    color: #DCDADD;
+    /* float: revert; */
+    width: 256px;
+    border: 1px solid #00000030;
+    height: 34px;
+}
+.search {
+    background-color: #599BD5;
+    outline: none;
+    border: 0px;
+
+    color: #fff;
+}
+.heading {
+    text-align: center;
+    background-color: #5A9AD7;
+    color: #fff;
+    border: 1px solid #7471717e;
+}
+.even{
+    background-color: #DEEAF7;
+}
+.leftside {
+    text-align: right;
+    width: 250px;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td {
+    border: 1px solid #7471717e;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+  }
+  .button {
+    display: flex;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+}
+  
+  .pre {
+    background-color: #5B9BD2;
+    color: #fff;
+    outline: none;
+    border: navajowhite;
+    padding: 5px 20px 5px 20px;
+}
+.sectable {
+    margin-top: 50px;
+}
+.third-table {
+    margin-top: 50px;
+}
+.exam {
+    width: 250px;
+}
+.grade{
+    text-align: center;
+}
+.talign{
+    text-align: right;
+}
+.print {
+    color: #fff;
+    background-color: #1B4170;
+    border: none;
+    padding: 4px 50px 4px 50px;
+    margin-top: 50px;
+}
+.pagelink {
+    margin-top: 50px;
+}
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: 0px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+   
+}
