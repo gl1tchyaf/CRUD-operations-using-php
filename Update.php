@@ -15,13 +15,9 @@
  $class_test = $_POST['class_test'];
  $class_participation = $_POST['class_participation'];
  $project = $_POST['project'];
- $total = $_POST['total'];
- $letter_grade = $_POST['letter_grade'];
- $grade_point = $_POST['grade_point'];
  $q = " update cse102fall2021 set id=$id, student_id='$student_id', student_name='$student_name',
      cgpa='$cgpa', department='$department', midone='$midone', midtwo='$midtwo', final='$final',
-     class_test='$class_test', class_participation='$class_participation', project='$project',
-     total='$total', letter_grade='$letter_grade', grade_point='$grade_point'
+     class_test='$class_test', class_participation='$class_participation', project='$project'
      where id=$id  ";
 
  $query = mysqli_query($con,$q);
@@ -83,15 +79,6 @@
 
  <label> Project: </label>
  <input type="text" name="project" class="form-control"> <br>
-
- <label> Total: </label>
- <input type="text" name="total" class="form-control"> <br>
-
- <label> Letter Grade: </label>
- <input type="text" name="letter_grade" class="form-control"> <br>
-
- <label> Grade Point: </label>
- <input type="text" name="grade_point" class="form-control"> <br>
 
  <button class="btn btn-success" type="submit" name="done"> Submit </button><br>
 

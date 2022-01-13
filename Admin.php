@@ -35,9 +35,6 @@
  <th> Class Test </th>
  <th> Class Participation </th>
  <th> Project </th>
- <th> Total </th>
- <th> Letter Grade </th>
- <th> Grade Point </th>
  <th> Delete Data </th>
  <th> Update Data </th>
  <th> Show Data </th>
@@ -64,9 +61,6 @@
  <td> <?php echo $res['class_test'];  ?> </td>
  <td> <?php echo $res['class_participation'];  ?> </td>
  <td> <?php echo $res['project'];  ?> </td>
- <td> <?php echo $res['total'];  ?> </td>
- <td> <?php echo $res['letter_grade'];  ?> </td>
- <td> <?php echo $res['grade_point'];  ?> </td>
  <td> <button class="btn-danger btn"> <a href="delete.php?id=<?php echo $res['id']; ?>" class="text-white"> Delete </a>  </button> </td>
  <td> <button class="btn-primary btn"> <a href="update.php?id=<?php echo $res['id']; ?>" class="text-white"> Update </a> </button> </td>
  <td> <button class="btn-primary btn"> <a href="result.php?id=<?php echo $res['id']; ?>" class="text-white"> Show </a> </button> </td>

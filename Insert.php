@@ -14,10 +14,7 @@ if(isset($_POST['done'])){
  $class_test = $_POST['class_test'];
  $class_participation = $_POST['class_participation'];
  $project = $_POST['project'];
- $total = $_POST['total'];
- $letter_grade = $_POST['letter_grade'];
- $grade_point = $_POST['grade_point'];
- $q = " INSERT INTO `cse102fall2021`(`student_id`, `student_name`, `cgpa`, `department`, `midone`, `midtwo`, `final`, `class_test`, `class_participation`, `project`, `total`, `letter_grade`, `grade_point`) VALUES ('$student_id','$student_name','$cgpa','$department','$midone','$midtwo','$final','$class_test','$class_participation','$project','$total','$letter_grade','$grade_point') ";
+ $q = " INSERT INTO `cse102fall2021`(`student_id`, `student_name`, `cgpa`, `department`, `midone`, `midtwo`, `final`, `class_test`, `class_participation`, `project`, `total`) VALUES ('$student_id','$student_name','$cgpa','$department','$midone','$midtwo','$final','$class_test','$class_participation','$project') ";
 
  $query = mysqli_query($con,$q);
 
@@ -82,14 +79,6 @@ if(isset($_POST['done'])){
  <label> Project: </label>
  <input type="text" name="project" class="form-control"> <br>
 
- <label> Total: </label>
- <input type="text" name="total" class="form-control"> <br>
-
- <label> Letter Grade: </label>
- <input type="text" name="letter_grade" class="form-control"> <br>
-
- <label> Grade Point: </label>
- <input type="text" name="grade_point" class="form-control"> <br>
 
  <button class="btn btn-success" type="submit" name="done"> Submit </button><br>
 

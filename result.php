@@ -14,14 +14,6 @@
     <title>Document</title>
 </head>
 <body>
-
-
-
- 
- 
- 
- 
- 
     <div class="container">
     <div class="row  logo">
         <div class="col-sm-8"><img src="logo.png" alt="" srcset=""></div>
@@ -123,12 +115,6 @@
               </table>
               
             </div>
-
-
-
-
-
-
          <div class="container third-table">
             <table>
 			<?php
@@ -136,10 +122,12 @@
 				 include 'conn.php'; 
 				 $id = $_GET['id'];
 				 $q = "select * from cse102fall2021 where id=$id";
+				  
 
 				 $query = mysqli_query($con,$q);
 
 				 while($res = mysqli_fetch_array($query)){
+					 $total = $res['midone']+$res['midtwo']+$res['final']+$res['class_test']+$res['class_participation']+$res['project'];
 				 ?>
                 <tr>
                     <th colspan="3" class="heading ">Overall Performance</th>
@@ -175,15 +163,48 @@
                   <td>Out of 25</td>
                 </tr>
                 <tr>
-                    <td class="talign">Letter Grade:</td>
-                    <td> <?php echo $res['letter_grade'];  ?> </td>
-                    
+                    <td class="talign">Total:</td>
+                    <td> <?php echo $total;  ?> </td>
+                    <td>Out of 100</td>
                   </tr>
-                  <tr>
+				  
+				  <tr>
                     <td class="talign">Grade Point:</td>
-                    <td> <?php echo $res['grade_point'];  ?> </td>
-                    <td>Out of 4.0</td>
+                    <td> <?php 
+					if($total>=90) echo "4.00";
+					else if($total>=87 && $total<90) echo "3.70";
+					else if($total>=83 && $total<87) echo "3.30";
+					else if($total>=80 && $total<83) echo "3.00";
+					else if($total>=77 && $total<80) echo "2.70";
+					else if($total>=73 && $total<77) echo "2.30";
+					else if($total>=70 && $total<73) echo "2.00";
+					else if($total>=67 && $total<70) echo "1.70";
+					else if($total>=63 && $total<67) echo "1.30";
+					else if($total>=60 && $total<63) echo "1.00";
+					else if($total<60) echo "0.00";
+					?> </td>
+                    <td>Out of 4.00</td>
                   </tr>
+				  
+				  <tr>
+                    <td class="talign">Grade Point:</td>
+                    <td> <?php 
+					if($total>=97) echo "A+";
+					else if($total>=90 && $total<97) echo "A";
+					else if($total>=87 && $total<90) echo "A-";
+					else if($total>=83 && $total<87) echo "B+";
+					else if($total>=80 && $total<83) echo "B";
+					else if($total>=77 && $total<80) echo "B-";
+					else if($total>=73 && $total<77) echo "C+";
+					else if($total>=70 && $total<73) echo "C";
+					else if($total>=67 && $total<70) echo "C-";
+					else if($total>=63 && $total<67) echo "D+";
+					else if($total>=60 && $total<63) echo "D";
+					else if($total<60) echo "F";
+					?> </td>
+                    <td>Max A+</td>
+                  </tr>
+                  
 				  <?php 
  }
   ?>
