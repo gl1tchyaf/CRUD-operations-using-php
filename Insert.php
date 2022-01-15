@@ -14,7 +14,7 @@ if(isset($_POST['done'])){
  $class_test = $_POST['class_test'];
  $class_participation = $_POST['class_participation'];
  $project = $_POST['project'];
- $q = " INSERT INTO `cse102fall2021`(`student_id`, `student_name`, `cgpa`, `department`, `midone`, `midtwo`, `final`, `class_test`, `class_participation`, `project`, `total`) VALUES ('$student_id','$student_name','$cgpa','$department','$midone','$midtwo','$final','$class_test','$class_participation','$project') ";
+ $q = " INSERT INTO `cse102fall2021`(`student_id`, `student_name`, `cgpa`, `department`, `midone`, `midtwo`, `final`, `class_test`, `class_participation`, `project`) VALUES ('$student_id','$student_name','$cgpa','$department','$midone','$midtwo','$final','$class_test','$class_participation','$project') ";
 
  $query = mysqli_query($con,$q);
 
